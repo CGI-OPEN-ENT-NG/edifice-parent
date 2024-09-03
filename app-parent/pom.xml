@@ -7,19 +7,19 @@
     <parent>
         <groupId>io.edifice</groupId>
         <artifactId>edifice-parent</artifactId>
-        <version>1.0</version>
+        <version>1.0-CGI</version>
     </parent>
 
     <groupId>io.edifice</groupId>
     <artifactId>app-parent</artifactId>
-    <version>1.0</version>
+    <version>1.0-CGI</version>
     <packaging>pom</packaging>
 
     <repositories>
         <repository>
             <id>ode</id>
             <name>ODE Repository</name>
-            <url>https://maven.opendigitaleducation.com/nexus/content/groups/public</url>
+            <url>https://nexus-pic2.support-ent.fr/repository</url>
         </repository>
     </repositories>
 
