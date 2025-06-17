@@ -30,7 +30,11 @@ clean () {
 }
 
 install () {
+  # edifice parents
   docker-compose run --rm maven mvn $MVN_OPTS install -DskipTests
+
+  # app-parent
+  docker-compose run --rm maven mvn -f app-parent/pom.xml $MVN_OPTS install -DskipTests
 }
 
 test () {
@@ -44,8 +48,11 @@ publish() {
     *SNAPSHOT) export nexusRepository='snapshots' ;;
     *)         export nexusRepository='releases' ;;
   esac
+  # edifice-parent deploy
+  docker-compose run --rm maven mvn $MVN_OPTS -DrepositoryId=maven-$nexusRepository -DskipTests --settings /var/maven/.m2/settings.xml deploy
 
-  docker-compose run --rm  maven mvn $MVN_OPTS -DrepositoryId=ode-$nexusRepository -DskipTests --settings /var/maven/.m2/settings.xml deploy
+  # app-parent deploy
+  docker-compose run --rm maven mvn -f app-parent/pom.xml $MVN_OPTS -DrepositoryId=maven-$nexusRepository -DskipTests --settings /var/maven/.m2/settings.xml deploy
 }
 
 for param in "$@"
