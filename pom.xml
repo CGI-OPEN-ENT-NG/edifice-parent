@@ -4,7 +4,7 @@
 
   <groupId>io.edifice</groupId>
   <artifactId>edifice-parent</artifactId>
-  <version>1.0.2</version>
+  <version>1.0-CGI</version>
   <packaging>pom</packaging>
 
   <scm>
@@ -43,14 +43,14 @@
 
   <distributionManagement>
     <snapshotRepository>
-      <id>ode-snapshots</id>
-      <name>ODE Snapshots</name>
-      <url>https://maven.opendigitaleducation.com/nexus/content/repositories/snapshots/</url>
+      <id>maven-snapshots</id>
+      <name>Maven Snapshots</name>
+      <url>https://nexus-pic2.support-ent.fr/repository/maven-snapshots</url>
     </snapshotRepository>
     <repository>
-      <id>ode-releases</id>
-      <name>ODE Releases</name>
-      <url>https://maven.opendigitaleducation.com/nexus/content/repositories/releases/</url>
+      <id>maven-releases</id>
+      <name>Maven Releases</name>
+      <url>https://nexus-pic2.support-ent.fr/repository/maven-releases</url>
     </repository>
   </distributionManagement>
 
