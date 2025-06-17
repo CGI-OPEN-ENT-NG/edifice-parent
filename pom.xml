@@ -4,7 +4,7 @@
 
   <groupId>io.edifice</groupId>
   <artifactId>edifice-parent</artifactId>
-  <version>1.0-CGI</version>
+  <version>1.0.3-CGI</version>
   <packaging>pom</packaging>
 
   <scm>
